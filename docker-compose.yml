@@ -17,7 +17,7 @@ services:
             - "traefik.enable=true"
             - "traefik.http.routers.meetup.rule=Host(`meet.meetup.mathe-server`)"
             - "traefik.http.routers.meetup.entrypoints=websecure"
-            - "traefik.http.services.meetup.loadbalancer.server.port=80"
+            - "traefik.http.services.meetup.loadbalancer.server.port=443"
         depends_on:
             - prosody
             - jicofo
