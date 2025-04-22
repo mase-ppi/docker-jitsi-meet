@@ -10,6 +10,11 @@ services:
             - ENABLE_LETSENCRYPT=0
             - DISABLE_HTTPS=1
             - PUBLIC_URL=https://meet.meetup.mathe-server
+            - JVB_PORT=10000
+            - JVB_PORT_MAPPING=31000
+            - JVB_ADVERTISE_IPS=DEINE.ÖFFENTLICHE.IP
+        ports:
+            - "31000:10000/udp"
         networks:
             - meet.jitsi
             - coolify
@@ -59,16 +64,20 @@ services:
         volumes:
             - ./config/jvb:/config
         ports:
-            - "10000:10000/udp"
+            - "31000:10000/udp"
         environment:
             - JVB_AUTH_USER=jvb
             - JVB_AUTH_PASSWORD=anothersecret
             - XMPP_AUTH_DOMAIN=auth.meet.jitsi
             - XMPP_SERVER=prosody
+            - JVB_PORT=10000
+            - JVB_PORT_MAPPING=31000
+            - JVB_ADVERTISE_IPS=your.public.ip.here
         networks:
             - meet.jitsi
         depends_on:
             - prosody
+
 
 networks:
     meet.jitsi:
