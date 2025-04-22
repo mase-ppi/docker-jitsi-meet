@@ -67,7 +67,7 @@ services:
             - XMPP_AUTH_DOMAIN=auth.meet.jitsi
             - XMPP_SERVER=prosody
             - JVB_PORT=10000
-            - JVB_PORT_MAPPING=31000
+            - JVB_PORT_MAPPING=10000
             - JVB_ADVERTISE_IPS=192.168.178.189
         networks:
             - meet.jitsi
