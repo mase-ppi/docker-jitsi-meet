@@ -7,9 +7,8 @@ services:
         volumes:
             - ./config/web:/config
         environment:
-            - ENABLE_LETSENCRYPT=1
+            - ENABLE_LETSENCRYPT=0
             - DISABLE_HTTPS=1
-            - ENABLE_TLS=0
             - PUBLIC_URL=https://meet.meetup.mathe-server
         networks:
             - meet.jitsi
@@ -71,9 +70,6 @@ services:
             - JVB_ADVERTISE_IPS=192.168.178.189
         networks:
             - meet.jitsi
-            - coolify
-        labels:
-            - "traefik.enable=true"
         depends_on:
             - prosody
 
