@@ -13,8 +13,6 @@ services:
             - JVB_PORT=10000
             - JVB_PORT_MAPPING=31000
             - JVB_ADVERTISE_IPS=DEINE.ÖFFENTLICHE.IP
-        ports:
-            - "31000:10000/udp"
         networks:
             - meet.jitsi
             - coolify
