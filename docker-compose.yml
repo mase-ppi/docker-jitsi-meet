@@ -59,7 +59,7 @@ services:
         volumes:
             - ./config/jvb:/config
         ports:
-            - "31000:10000/udp"
+            - "10000:10000/udp"
         environment:
             - JVB_AUTH_USER=jvb
             - JVB_AUTH_PASSWORD=anothersecret
@@ -70,6 +70,12 @@ services:
             - JVB_ADVERTISE_IPS=192.168.178.189
         networks:
             - meet.jitsi
+            - coolify
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.jvb.rule=Host(`jvb.meetup.mathe-server`)"
+            - "traefik.http.routers.jvb.entrypoints=websecure"
+            - "traefik.http.services.jvb.loadbalancer.server.port=443"
         depends_on:
             - prosody
 
