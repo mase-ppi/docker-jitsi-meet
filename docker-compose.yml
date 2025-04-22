@@ -9,13 +9,13 @@ services:
         environment:
             - ENABLE_LETSENCRYPT=0
             - DISABLE_HTTPS=1
-            - PUBLIC_URL=https://meetup.mathe-server
+            - PUBLIC_URL=https://meet.meetup.mathe-server
         networks:
             - meet.jitsi
             - coolify
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.meetup.rule=Host(`meetup.mathe-server`)"
+            - "traefik.http.routers.meetup.rule=Host(`meet.meetup.mathe-server`)"
             - "traefik.http.routers.meetup.entrypoints=websecure"
             - "traefik.http.services.meetup.loadbalancer.server.port=80"
         depends_on:
