@@ -73,9 +73,6 @@ services:
             - coolify
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.jvb.rule=Host(`jvb.meetup.mathe-server`)"
-            - "traefik.http.routers.jvb.entrypoints=websecure"
-            - "traefik.http.services.jvb.loadbalancer.server.port=443"
         depends_on:
             - prosody
 
