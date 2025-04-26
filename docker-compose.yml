@@ -44,7 +44,9 @@ services:
             - "5347:5347"
             - "5280:5280"
         networks:
-            - meet.jitsi
+            meet.jitsi:
+                aliases:
+                    - xmpp.meet.jitsi
 
     jicofo:
         image: jitsi/jicofo:stable
