@@ -13,14 +13,6 @@ services:
         networks:
             - meet.jitsi
             - coolify
-        labels:
-            - "traefik.enable=true"
-            - "traefik.http.routers.meetup.rule=Host(`meet.meetup.mathe-host.de`)"
-            - "traefik.http.routers.meetup.entrypoints=websecure"
-            - "traefik.http.services.meetup.loadbalancer.server.port=80"
-            - "traefik.http.middlewares.websocket.headers.customrequestheaders.Connection=Upgrade"
-            - "traefik.http.middlewares.websocket.headers.customrequestheaders.Upgrade=websocket"
-            - "traefik.http.routers.meetup.middlewares=websocket"
         depends_on:
             - prosody
             - jicofo
@@ -38,7 +30,7 @@ services:
             - JVB_AUTH_USER=jvb
             - JVB_AUTH_PASSWORD=anothersecret
         ports:
-            - "5229:5222"
+            - "5222:5222"
             - "5347:5347"
             - "5280:5280"
         networks:
@@ -53,7 +45,7 @@ services:
             - JICOFO_AUTH_USER=focus
             - JICOFO_AUTH_PASSWORD=supersecret
             - XMPP_DOMAIN=meet.meetup.mathe-server.de
-            - XMPP_AUTH_DOMAIN=auth.meet.jitsi
+            - XMPP_AUTH_DOMAIN=auth.meetup.mathe-server.de
             - XMPP_SERVER=prosody
         networks:
             - meet.jitsi
