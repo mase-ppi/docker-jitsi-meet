@@ -8,7 +8,7 @@ services:
             - ./config/web:/config
         environment:
             - ENABLE_LETSENCRYPT=0
-            - DISABLE_HTTPS=0
+            - DISABLE_HTTPS=1
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
             - XMPP_DOMAIN=meet.meetup.mathe-host.de
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
