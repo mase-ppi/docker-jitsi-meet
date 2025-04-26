@@ -10,7 +10,7 @@ services:
             - ENABLE_LETSENCRYPT=0
             - DISABLE_HTTPS=1
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
-            - XMPP_DOMAIN=meet.meetup.mathe-host.de
+            - XMPP_DOMAIN=meetup.mathe-host.de
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_MUC_DOMAIN=muc.meetup.mathe-host.de
             - XMPP_INTERNAL_MUC_DOMAIN=internal-muc.meetup.mathe-host.de
@@ -37,7 +37,7 @@ services:
             - JVB_AUTH_USER=jvb
             - JVB_AUTH_PASSWORD=anothersecret
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
-            - XMPP_DOMAIN=meet.meetup.mathe-host.de
+            - XMPP_DOMAIN=meetup.mathe-host.de
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_MUC_DOMAIN=muc.meetup.mathe-host.de
             - XMPP_INTERNAL_MUC_DOMAIN=internal-muc.meetup.mathe-host.de
@@ -60,7 +60,7 @@ services:
             - JICOFO_AUTH_PASSWORD=supersecret
             - XMPP_SERVER=prosody
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
-            - XMPP_DOMAIN=meet.meetup.mathe-host.de
+            - XMPP_DOMAIN=meetup.mathe-host.de
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_MUC_DOMAIN=muc.meetup.mathe-host.de
             - XMPP_INTERNAL_MUC_DOMAIN=internal-muc.meetup.mathe-host.de
@@ -80,7 +80,7 @@ services:
             - JVB_AUTH_USER=jvb
             - JVB_AUTH_PASSWORD=anothersecret
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
-            - XMPP_DOMAIN=meet.meetup.mathe-host.de
+            - XMPP_DOMAIN=meetup.mathe-host.de
             - XMPP_SERVER=prosody
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_MUC_DOMAIN=muc.meetup.mathe-host.de
