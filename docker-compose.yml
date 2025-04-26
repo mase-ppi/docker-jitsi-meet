@@ -8,14 +8,14 @@ services:
             - ./config/web:/config
         environment:
             - ENABLE_LETSENCRYPT=0
-            - DISABLE_HTTPS=1
-            - PUBLIC_URL=https://meet.meetup.mathe-server
+            - DISABLE_HTTPS=0
+            - PUBLIC_URL=https://meet.meetup.mathe-host.de
         networks:
             - meet.jitsi
             - coolify
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.meetup.rule=Host(`meet.meetup.mathe-server`)"
+            - "traefik.http.routers.meetup.rule=Host(`meet.meetup.mathe-host.de`)"
             - "traefik.http.routers.meetup.entrypoints=websecure"
             - "traefik.http.services.meetup.loadbalancer.server.port=80"
             - "traefik.http.middlewares.websocket.headers.customrequestheaders.Connection=Upgrade"
@@ -52,7 +52,7 @@ services:
         environment:
             - JICOFO_AUTH_USER=focus
             - JICOFO_AUTH_PASSWORD=supersecret
-            - XMPP_DOMAIN=meet.meetup.mathe-server
+            - XMPP_DOMAIN=meet.meetup.mathe-server.de
             - XMPP_AUTH_DOMAIN=auth.meet.jitsi
             - XMPP_SERVER=prosody
         networks:
@@ -70,11 +70,11 @@ services:
         environment:
             - JVB_AUTH_USER=jvb
             - JVB_AUTH_PASSWORD=anothersecret
-            - XMPP_AUTH_DOMAIN=auth.meetup.mathe-server
+            - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_SERVER=prosody
             - JVB_PORT=10000
             - JVB_PORT_MAPPING=10000
-            - JVB_ADVERTISE_IPS=192.168.178.189
+            - JVB_ADVERTISE_IPS=168.119.109.202
         networks:
             - meet.jitsi
         depends_on:
