@@ -32,7 +32,7 @@ services:
             - ./config/prosody:/config
         environment:
             - AUTH_TYPE=internal
-            - JICOFO_AUTH_USER=${JICOFO_AUTH_USER)
+            - JICOFO_AUTH_USER=${JICOFO_AUTH_USER}
             - JICOFO_AUTH_PASSWORD=${JICOFO_AUTH_PASSWORD}
             - JVB_AUTH_USER=${JVB_AUTH_USER}
             - JVB_AUTH_PASSWORD=${JVB_AUTH_PASSWORD}
