@@ -32,10 +32,10 @@ services:
             - ./config/prosody:/config
         environment:
             - AUTH_TYPE=internal
-            - JICOFO_AUTH_USER=focus
-            - JICOFO_AUTH_PASSWORD=supersecret
-            - JVB_AUTH_USER=jvb
-            - JVB_AUTH_PASSWORD=anothersecret
+            - JICOFO_AUTH_USER=${JICOFO_AUTH_USER)
+            - JICOFO_AUTH_PASSWORD=${JICOFO_AUTH_PASSWORD}
+            - JVB_AUTH_USER=${JVB_AUTH_USER}
+            - JVB_AUTH_PASSWORD=${JVB_AUTH_PASSWORD}
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
             - XMPP_DOMAIN=meetup.mathe-host.de
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
@@ -56,8 +56,8 @@ services:
         volumes:
             - ./config/jicofo:/config
         environment:
-            - JICOFO_AUTH_USER=focus
-            - JICOFO_AUTH_PASSWORD=supersecret
+            - JICOFO_AUTH_USER=${JICOFO_AUTH_USER}
+            - JICOFO_AUTH_PASSWORD=${JICOFO_AUTH_PASSWORD}
             - XMPP_SERVER=prosody
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
             - XMPP_DOMAIN=meetup.mathe-host.de
@@ -77,8 +77,8 @@ services:
         ports:
             - "10000:10000/udp"
         environment:
-            - JVB_AUTH_USER=jvb
-            - JVB_AUTH_PASSWORD=anothersecret
+            - JVB_AUTH_USER=${JVB_AUTH_USER}
+            - JVB_AUTH_PASSWORD=${JVB_AUTH_PASSWORD}
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
             - XMPP_DOMAIN=meetup.mathe-host.de
             - XMPP_SERVER=prosody
