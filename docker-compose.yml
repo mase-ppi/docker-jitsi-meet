@@ -14,6 +14,7 @@ services:
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_MUC_DOMAIN=muc.meetup.mathe-host.de
             - XMPP_INTERNAL_MUC_DOMAIN=internal-muc.meetup.mathe-host.de
+            - XMPP_SERVER=prosody
         networks:
             - meet.jitsi
             - coolify
@@ -76,6 +77,7 @@ services:
             - JVB_AUTH_PASSWORD=anothersecret
             - PUBLIC_URL=https://meet.meetup.mathe-host.de
             - XMPP_DOMAIN=meet.meetup.mathe-host.de
+            - XMPP_SERVER=prosody
             - XMPP_AUTH_DOMAIN=auth.meetup.mathe-host.de
             - XMPP_MUC_DOMAIN=muc.meetup.mathe-host.de
             - XMPP_INTERNAL_MUC_DOMAIN=internal-muc.meetup.mathe-host.de
